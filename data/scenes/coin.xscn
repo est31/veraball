@@ -4,6 +4,30 @@
 	<ext_resource path="res://data/models/coin/model.msh" type="Mesh" index="2"></ext_resource>
 	<ext_resource path="res://data/textures/particles/energy.tex" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://data/resources/sample_libraries/coin.xml" type="SampleLibrary" index="1"></ext_resource>
+	<resource type="Animation" path="local://3">
+		<string name="resource/name"> "Spin" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Area/MeshInstance:transform/rotation" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.5, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector3> 0, 0, 0 </vector3>
+				<vector3> 0, 180, 0 </vector3>
+				<vector3> 0, 360, 0 </vector3>
+			</array>
+		</dictionary>
+
+	</resource>
 	<resource type="Animation" path="local://5">
 		<string name="resource/name"> "Pickup" </string>
 		<real name="length"> 1 </real>
@@ -47,7 +71,7 @@
 			<string> "cont" </string>
 			<bool> False </bool>
 			<string> "times" </string>
-			<real_array  len="2"> 				0.05, 0.1 </real_array>
+			<real_array  len="2"> 				0, 0.05 </real_array>
 			<string> "transitions" </string>
 			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
@@ -56,28 +80,36 @@
 				<bool> False </bool>
 			</array>
 		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://3">
-		<string name="resource/name"> "Spin" </string>
-		<real name="length"> 1 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 0.5 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Area/MeshInstance:transform/rotation" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
+		<string name="tracks/3/type"> "value" </string>
+		<node_path name="tracks/3/path"> "OmniLight:params/enabled" </node_path>
+		<int name="tracks/3/interp"> 1 </int>
+		<dictionary name="tracks/3/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 0.5 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<bool> True </bool>
+				<bool> False </bool>
+			</array>
+		</dictionary>
+		<string name="tracks/4/type"> "value" </string>
+		<node_path name="tracks/4/path"> "OmniLight:params/energy" </node_path>
+		<int name="tracks/4/interp"> 1 </int>
+		<dictionary name="tracks/4/keys" shared="false">
 			<string> "cont" </string>
 			<bool> True </bool>
 			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.5, 1 </real_array>
+			<real_array  len="2"> 				0, 0.5 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector3> 0, 0, 0 </vector3>
-				<vector3> 0, 180, 0 </vector3>
-				<vector3> 0, 360, 0 </vector3>
+			<array  len="2" shared="false">
+				<real> 2 </real>
+				<real> 0 </real>
 			</array>
 		</dictionary>
 
@@ -166,12 +198,12 @@
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "conns" </string>
-			<int_array  len="6"> 				3, 0, 113, 112, 2, 0 </int_array>
+			<int_array  len="6"> 				3, 0, 130, 129, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="114">
+			<string_array  len="131">
 				<string> "Coin" </string>
 				<string> "_import_transform" </string>
 				<string> "script/script" </string>
@@ -181,8 +213,8 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
-				<string> "anims/Pickup" </string>
 				<string> "anims/Spin" </string>
+				<string> "anims/Pickup" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -284,18 +316,35 @@
 				<string> "phase_2/color" </string>
 				<string> "phase_3/pos" </string>
 				<string> "phase_3/color" </string>
+				<string> "OmniLight" </string>
+				<string> "params/enabled" </string>
+				<string> "params/editor_only" </string>
+				<string> "params/bake_mode" </string>
+				<string> "params/energy" </string>
+				<string> "colors/diffuse" </string>
+				<string> "colors/specular" </string>
+				<string> "shadow/shadow" </string>
+				<string> "shadow/darkening" </string>
+				<string> "shadow/z_offset" </string>
+				<string> "shadow/z_slope_scale" </string>
+				<string> "shadow/esm_multiplier" </string>
+				<string> "shadow/blur_passes" </string>
+				<string> "projector" </string>
+				<string> "operator" </string>
+				<string> "params/radius" </string>
+				<string> "params/attenuation" </string>
 				<string> "_on_Area_body_enter" </string>
 				<string> "body_enter" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 7 </int>
+			<int> 8 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="295"> 				-1, -1, 4, 0, -1, 3, 1, 0, 2, 1, 3, 2, 0, 0, 0, 5, 5, -1, 9, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 0, 0, 0, 15, 15, -1, 10, 1, 0, 16, 4, 17, 9, 18, 9, 19, 12, 20, 9, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 25, 25, -1, 17, 1, 0, 26, 16, 27, 16, 28, 3, 29, 17, 30, 0, 31, 16, 32, 18, 33, 16, 34, 4, 35, 19, 36, 20, 37, 21, 38, 9, 39, 4, 40, 8, 41, 8, 0, 3, 0, 42, 42, -1, 17, 1, 0, 43, 3, 44, 8, 45, 22, 46, 8, 47, 8, 48, 4, 49, 4, 50, 4, 51, 16, 52, 16, 53, 16, 54, 16, 55, 16, 56, 18, 57, 23, 58, 5, 0, 3, 0, 59, 59, -1, 4, 1, 0, 60, 17, 61, 16, 62, 18, 0, 0, 0, 63, 63, -1, 63, 1, 0, 43, 3, 44, 8, 45, 24, 46, 8, 47, 8, 48, 4, 49, 4, 50, 4, 51, 16, 52, 16, 53, 16, 54, 16, 55, 16, 56, 18, 64, 25, 65, 26, 66, 16, 67, 27, 68, 28, 69, 29, 70, 30, 71, 29, 72, 16, 73, 4, 74, 31, 75, 9, 76, 20, 77, 32, 78, 4, 79, 4, 80, 4, 81, 4, 82, 4, 83, 9, 84, 9, 85, 4, 86, 16, 87, 9, 88, 4, 89, 4, 90, 4, 91, 4, 92, 4, 93, 4, 94, 4, 95, 4, 96, 4, 97, 4, 98, 4, 99, 4, 100, 4, 101, 4, 102, 4, 103, 33, 104, 4, 105, 34, 106, 9, 107, 35, 108, 9, 109, 36, 110, 9, 111, 36, 0 </int_array>
+			<int_array  len="338"> 				-1, -1, 4, 0, -1, 3, 1, 0, 2, 1, 3, 2, 0, 0, 0, 5, 5, -1, 9, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 0, 0, 0, 15, 15, -1, 10, 1, 0, 16, 4, 17, 9, 18, 9, 19, 12, 20, 9, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 25, 25, -1, 17, 1, 0, 26, 16, 27, 16, 28, 3, 29, 17, 30, 0, 31, 16, 32, 18, 33, 16, 34, 4, 35, 19, 36, 20, 37, 21, 38, 9, 39, 4, 40, 8, 41, 8, 0, 3, 0, 42, 42, -1, 17, 1, 0, 43, 3, 44, 8, 45, 22, 46, 8, 47, 8, 48, 4, 49, 4, 50, 4, 51, 16, 52, 16, 53, 16, 54, 16, 55, 16, 56, 18, 57, 23, 58, 5, 0, 3, 0, 59, 59, -1, 4, 1, 0, 60, 17, 61, 16, 62, 18, 0, 0, 0, 63, 63, -1, 63, 1, 0, 43, 3, 44, 8, 45, 24, 46, 8, 47, 8, 48, 4, 49, 4, 50, 4, 51, 16, 52, 16, 53, 16, 54, 16, 55, 16, 56, 18, 64, 25, 65, 26, 66, 16, 67, 27, 68, 28, 69, 29, 70, 30, 71, 29, 72, 16, 73, 4, 74, 31, 75, 9, 76, 20, 77, 32, 78, 4, 79, 4, 80, 4, 81, 4, 82, 4, 83, 9, 84, 9, 85, 4, 86, 16, 87, 9, 88, 4, 89, 4, 90, 4, 91, 4, 92, 4, 93, 4, 94, 4, 95, 4, 96, 4, 97, 4, 98, 4, 99, 4, 100, 4, 101, 4, 102, 4, 103, 33, 104, 4, 105, 34, 106, 9, 107, 35, 108, 9, 109, 36, 110, 9, 111, 36, 0, 0, 0, 112, 112, -1, 18, 1, 0, 43, 3, 113, 16, 114, 16, 115, 18, 116, 4, 117, 37, 118, 34, 119, 16, 120, 4, 121, 38, 122, 4, 123, 39, 124, 9, 125, 24, 126, 18, 127, 40, 128, 9, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="37" shared="false">
+			<array  len="41" shared="false">
 				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 </transform>
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
@@ -337,9 +386,9 @@
 							<string> "default_srgb" </string>
 							<bool> False </bool>
 							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
+							<real> 6.275664 </real>
 							<string> "deflight_rot_y" </string>
-							<real> 0.628319 </real>
+							<real> 0.318319 </real>
 							<string> "fov" </string>
 							<real> 45 </real>
 							<string> "show_grid" </string>
@@ -352,7 +401,7 @@
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
 									<string> "distance" </string>
-									<real> 5.441955 </real>
+									<real> 11.748775 </real>
 									<string> "listener" </string>
 									<bool> True </bool>
 									<string> "pos" </string>
@@ -362,9 +411,9 @@
 									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "x_rot" </string>
-									<real> 0.395797 </real>
+									<real> 0.370797 </real>
 									<string> "y_rot" </string>
-									<real> -0.8625 </real>
+									<real> 11.599986 </real>
 								</dictionary>
 								<dictionary  shared="false">
 									<string> "distance" </string>
@@ -437,8 +486,8 @@
 				<int> 1 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
-				<resource  resource_type="Animation" path="local://5">  </resource>
 				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://5">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
 				<array  len="0" shared="false">
@@ -468,6 +517,10 @@
 				<color> 1, 1, 1, 1 </color>
 				<color> 0, 0, 0, 0 </color>
 				<color> 0, 0, 0, 1 </color>
+				<color> 1, 1, 0.501961, 1 </color>
+				<real> 0.001 </real>
+				<real> 60 </real>
+				<real> 3 </real>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>

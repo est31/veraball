@@ -23,6 +23,7 @@ func _fixed_process(delta):
 		game_time += delta
 
 func centerprint(text):
+	get_node("/root/Global/CenterPrint").show()
 	get_node("/root/Global/CenterPrint/Label").set_text(text)
 	get_node("/root/Global/CenterPrint/AnimationPlayer").play("Fade")
 

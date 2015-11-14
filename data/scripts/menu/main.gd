@@ -1,20 +1,29 @@
 extends Control
 
 var global
+var hud_scene
+var centerprint_scene
 
 var current_menu
 
+func _ready():
+	global = get_node("/root/Global")
+	hud_scene = get_node("/root/Global/HUD")
+	centerprint_scene = get_node("/root/Global/CenterPrint")
+	set_process_input(true)
+	
+	# Hide HUD in main menu
+	hud_scene.hide()
+	centerprint_scene.hide()
+	# Reset coin count to 0:
+	global.coins = 0
+	global.clock_running = true
+	
 func _on_PlayButton_pressed():
-	get_tree().change_scene("res://data/scenes/maps/basics.xscn")
+	global.start_game("basics")
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
-
-func _ready():
-	global = get_node("/root/Global")
-	set_process_input(true)
-	# Reset coin count to 0:
-	global.coins = 0
 
 func _on_FPSLimitLineEdit_text_changed(text):
 	# Prevent too low FPS limit

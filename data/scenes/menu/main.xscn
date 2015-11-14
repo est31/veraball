@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://data/scripts/menu/main.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://data/resources/themes/default.xthm" type="Theme" index="0"></ext_resource>
+	<ext_resource path="res://data/scripts/menu/main.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://data/fonts/roboto/roboto-bold.fnt" type="Font" index="2"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
 			<int> 5 </int>
 			<string> "conns" </string>
-			<int_array  len="30"> 				2, 0, 49, 48, 2, 0, 3, 0, 49, 50, 2, 0, 4, 0, 49, 51, 2, 0, 5, 0, 49, 52, 2, 0, 9, 0, 54, 53, 2, 0 </int_array>
+			<int_array  len="30"> 				3, 0, 52, 51, 2, 0, 4, 0, 52, 53, 2, 0, 5, 0, 52, 54, 2, 0, 6, 0, 52, 55, 2, 0, 10, 0, 57, 56, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="55">
+			<string_array  len="58">
 				<string> "MainMenu" </string>
 				<string> "margin/right" </string>
 				<string> "margin/bottom" </string>
@@ -25,12 +25,21 @@
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "Control" </string>
-				<string> "MainButtons" </string>
-				<string> "PlayButton" </string>
+				<string> "Logo" </string>
 				<string> "margin/left" </string>
 				<string> "margin/top" </string>
-				<string> "toggle_mode" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "custom_colors/font_color" </string>
 				<string> "text" </string>
+				<string> "align" </string>
+				<string> "valign" </string>
+				<string> "percent_visible" </string>
+				<string> "lines_skipped" </string>
+				<string> "max_lines_visible" </string>
+				<string> "Label" </string>
+				<string> "MainButtons" </string>
+				<string> "PlayButton" </string>
+				<string> "toggle_mode" </string>
 				<string> "flat" </string>
 				<string> "Button" </string>
 				<string> "OptionsButton" </string>
@@ -52,12 +61,6 @@
 				<string> "secret" </string>
 				<string> "LineEdit" </string>
 				<string> "FPSLimitLabel" </string>
-				<string> "align" </string>
-				<string> "valign" </string>
-				<string> "percent_visible" </string>
-				<string> "lines_skipped" </string>
-				<string> "max_lines_visible" </string>
-				<string> "Label" </string>
 				<string> "HelpMenu" </string>
 				<string> "HelpPanel" </string>
 				<string> "HelpTitle" </string>
@@ -71,14 +74,14 @@
 				<string> "text_changed" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 15 </int>
+			<int> 16 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="393"> 				-1, -1, 10, 0, -1, 9, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 11, -1, 6, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 0, 1, 0, 18, 12, -1, 11, 13, 7, 14, 8, 1, 9, 2, 10, 3, 1, 4, 2, 5, 3, 6, 3, 15, 1, 16, 11, 17, 1, 0, 1, 0, 18, 19, -1, 11, 13, 7, 14, 12, 1, 9, 2, 13, 3, 1, 4, 2, 5, 3, 6, 3, 15, 1, 16, 14, 17, 1, 0, 1, 0, 18, 20, -1, 11, 13, 7, 14, 15, 1, 9, 2, 16, 3, 1, 4, 2, 5, 3, 6, 3, 15, 1, 16, 17, 17, 1, 0, 1, 0, 18, 21, -1, 11, 13, 7, 14, 18, 1, 9, 2, 19, 3, 1, 4, 2, 5, 3, 6, 3, 15, 1, 16, 20, 17, 1, 0, 0, 0, 10, 22, -1, 7, 23, 1, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 0, 6, 0, 25, 24, -1, 7, 13, 21, 1, 22, 2, 23, 3, 1, 4, 2, 5, 3, 6, 3, 0, 7, 0, 31, 26, -1, 10, 1, 24, 2, 25, 3, 1, 4, 2, 5, 3, 6, 3, 27, 26, 28, 2, 29, 27, 30, 28, 0, 7, 0, 36, 32, -1, 12, 13, 29, 14, 30, 1, 31, 2, 32, 3, 1, 4, 2, 5, 3, 6, 3, 16, 33, 33, 34, 34, 2, 35, 1, 0, 7, 0, 43, 37, -1, 13, 13, 35, 14, 30, 1, 9, 2, 36, 3, 2, 4, 2, 5, 3, 16, 37, 38, 3, 39, 38, 40, 39, 41, 34, 42, 28, 0, 0, 0, 10, 44, -1, 7, 23, 1, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 0, 11, 0, 25, 45, -1, 7, 13, 21, 1, 22, 2, 23, 3, 1, 4, 2, 5, 3, 6, 3, 0, 12, 0, 31, 46, -1, 10, 1, 24, 2, 25, 3, 1, 4, 2, 5, 3, 6, 3, 27, 26, 28, 2, 29, 40, 30, 28, 0, 12, 0, 31, 47, -1, 12, 13, 41, 14, 30, 1, 42, 2, 23, 3, 1, 4, 2, 5, 3, 6, 3, 27, 26, 28, 2, 29, 43, 30, 28, 0 </int_array>
+			<int_array  len="430"> 				-1, -1, 10, 0, -1, 9, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 22, 11, -1, 15, 12, 7, 13, 8, 1, 9, 2, 10, 3, 2, 4, 2, 5, 3, 14, 11, 15, 12, 16, 13, 17, 14, 18, 14, 19, 15, 20, 16, 21, 17, 0, 0, 0, 10, 23, -1, 6, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 0, 2, 0, 27, 24, -1, 11, 12, 7, 13, 18, 1, 9, 2, 19, 3, 1, 4, 2, 5, 3, 6, 3, 25, 1, 16, 20, 26, 1, 0, 2, 0, 27, 28, -1, 11, 12, 7, 13, 21, 1, 9, 2, 22, 3, 1, 4, 2, 5, 3, 6, 3, 25, 1, 16, 23, 26, 1, 0, 2, 0, 27, 29, -1, 11, 12, 7, 13, 24, 1, 9, 2, 25, 3, 1, 4, 2, 5, 3, 6, 3, 25, 1, 16, 26, 26, 1, 0, 2, 0, 27, 30, -1, 11, 12, 7, 13, 27, 1, 9, 2, 28, 3, 1, 4, 2, 5, 3, 6, 3, 25, 1, 16, 29, 26, 1, 0, 0, 0, 10, 31, -1, 7, 32, 1, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 0, 7, 0, 34, 33, -1, 7, 12, 30, 1, 31, 2, 32, 3, 1, 4, 2, 5, 3, 6, 3, 0, 8, 0, 40, 35, -1, 10, 1, 33, 2, 34, 3, 1, 4, 2, 5, 3, 6, 3, 36, 11, 37, 2, 38, 35, 39, 17, 0, 8, 0, 45, 41, -1, 12, 12, 36, 13, 37, 1, 38, 2, 39, 3, 1, 4, 2, 5, 3, 6, 3, 16, 40, 42, 16, 43, 2, 44, 1, 0, 8, 0, 22, 46, -1, 13, 12, 41, 13, 37, 1, 9, 2, 42, 3, 2, 4, 2, 5, 3, 16, 43, 17, 3, 18, 14, 19, 15, 20, 16, 21, 17, 0, 0, 0, 10, 47, -1, 7, 32, 1, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 0, 12, 0, 34, 48, -1, 7, 12, 30, 1, 31, 2, 32, 3, 1, 4, 2, 5, 3, 6, 3, 0, 13, 0, 40, 49, -1, 10, 1, 33, 2, 34, 3, 1, 4, 2, 5, 3, 6, 3, 36, 11, 37, 2, 38, 44, 39, 17, 0, 13, 0, 40, 50, -1, 12, 12, 45, 13, 37, 1, 46, 2, 32, 3, 1, 4, 2, 5, 3, 6, 3, 36, 11, 37, 2, 38, 47, 39, 17, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="44" shared="false">
+			<array  len="48" shared="false">
 				<real> 40 </real>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -87,7 +90,7 @@
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -222,8 +225,17 @@
 					</dictionary>
 				</dictionary>
 				<real> 170 </real>
-				<real> 100 </real>
+				<real> 30 </real>
 				<real> 300 </real>
+				<real> 90 </real>
+				<resource  external="2">  </resource>
+				<color> 0.333333, 0.8, 1, 1 </color>
+				<string> "Veraball" </string>
+				<int> 1 </int>
+				<real> 1 </real>
+				<int> 0 </int>
+				<int> -1 </int>
+				<real> 100 </real>
 				<real> 160 </real>
 				<string> "Play" </string>
 				<real> 190 </real>
@@ -240,20 +252,15 @@
 				<real> 600 </real>
 				<real> 570 </real>
 				<real> 50 </real>
-				<resource  external="2">  </resource>
 				<string> "[color=#ffff00][center][b]Options[/b][/center][/color]" </string>
-				<int> -1 </int>
 				<real> 310 </real>
 				<real> 80 </real>
 				<real> 530 </real>
 				<real> 112 </real>
 				<string> "60" </string>
-				<int> 0 </int>
 				<real> 10 </real>
 				<real> 110 </real>
 				<string> "FPS Limit" </string>
-				<int> 1 </int>
-				<real> 1 </real>
 				<string> "[color=#ffff00][center][b]Help[/b][/center][/color]" </string>
 				<real> 20 </real>
 				<real> 550 </real>

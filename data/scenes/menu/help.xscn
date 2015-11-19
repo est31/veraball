@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://data/scripts/hud/centerprint.gd" type="Script" index="1"></ext_resource>
+	<ext_resource path="res://data/fonts/roboto/roboto-bold.fnt" type="Font" index="2"></ext_resource>
 	<ext_resource path="res://data/resources/themes/default.xthm" type="Theme" index="0"></ext_resource>
-	<resource type="Animation" path="local://1">
-		<string name="resource/name"> "Fade" </string>
-		<real name="length"> 5 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.5 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Label:custom_colors/font_color" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 3, 5 </real_array>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 1, 1, 0 </color>
-			</array>
-		</dictionary>
-
-	</resource>
+	<ext_resource path="res://data/scripts/menu/help.gd" type="Script" index="1"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -36,8 +13,8 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="27">
-				<string> "CenterPrint" </string>
+			<string_array  len="22">
+				<string> "HelpMenu" </string>
 				<string> "margin/right" </string>
 				<string> "margin/bottom" </string>
 				<string> "focus/ignore_mouse" </string>
@@ -48,30 +25,25 @@
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "Control" </string>
-				<string> "Label" </string>
-				<string> "custom_colors/font_color" </string>
-				<string> "align" </string>
-				<string> "valign" </string>
-				<string> "percent_visible" </string>
-				<string> "lines_skipped" </string>
-				<string> "max_lines_visible" </string>
-				<string> "AnimationPlayer" </string>
-				<string> "playback/process_mode" </string>
-				<string> "playback/default_blend_time" </string>
-				<string> "root/root" </string>
-				<string> "anims/Fade" </string>
-				<string> "playback/active" </string>
-				<string> "playback/speed" </string>
-				<string> "blend_times" </string>
-				<string> "autoplay" </string>
+				<string> "HelpPanel" </string>
+				<string> "margin/left" </string>
+				<string> "Panel" </string>
+				<string> "Title" </string>
+				<string> "custom_fonts/bold_font" </string>
+				<string> "bbcode/enabled" </string>
+				<string> "bbcode/bbcode" </string>
+				<string> "visible_characters" </string>
+				<string> "RichTextLabel" </string>
+				<string> "Text" </string>
+				<string> "margin/top" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 4 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="77"> 				-1, -1, 10, 0, -1, 9, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 11, -1, 11, 1, 7, 2, 8, 3, 2, 4, 2, 5, 3, 12, 9, 13, 10, 14, 10, 15, 11, 16, 12, 17, 13, 0, 0, 0, 18, 18, -1, 8, 19, 10, 20, 14, 21, 15, 22, 16, 23, 2, 24, 11, 25, 17, 26, 18, 0 </int_array>
+			<int_array  len="104"> 				-1, -1, 10, 0, -1, 9, 1, 0, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 13, 11, -1, 7, 12, 7, 1, 8, 2, 9, 3, 1, 4, 2, 5, 3, 6, 3, 0, 1, 0, 19, 14, -1, 10, 1, 10, 2, 11, 3, 1, 4, 2, 5, 3, 6, 3, 15, 12, 16, 2, 17, 13, 18, 14, 0, 1, 0, 19, 20, -1, 12, 12, 15, 21, 16, 1, 17, 2, 9, 3, 1, 4, 2, 5, 3, 6, 3, 15, 12, 16, 2, 17, 18, 18, 14, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="19" shared="false">
 				<real> 40 </real>
@@ -82,13 +54,13 @@
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -348.51, -213.853 </vector2>
+							<vector2> -168.706, -142.008 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -108,7 +80,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.814506 </real>
+							<real> 1 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -134,7 +106,7 @@
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
 									<string> "distance" </string>
-									<real> 4 </real>
+									<real> 11.748774 </real>
 									<string> "listener" </string>
 									<bool> True </bool>
 									<string> "pos" </string>
@@ -144,9 +116,9 @@
 									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "x_rot" </string>
-									<real> 0.3125 </real>
+									<real> 0.1625 </real>
 									<string> "y_rot" </string>
-									<real> -0.025 </real>
+									<real> -0.1375 </real>
 								</dictionary>
 								<dictionary  shared="false">
 									<string> "distance" </string>
@@ -216,19 +188,18 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
+				<real> 460 </real>
 				<real> 1030 </real>
 				<real> 600 </real>
-				<color> 1, 1, 1, 1 </color>
-				<int> 1 </int>
-				<real> 1 </real>
-				<int> 0 </int>
+				<real> 570 </real>
+				<real> 50 </real>
+				<resource  external="2">  </resource>
+				<string> "[color=#ffff00][center][b]Help[/b][/center][/color]" </string>
 				<int> -1 </int>
-				<real> 0 </real>
-				<node_path> ".." </node_path>
-				<resource  resource_type="Animation" path="local://1">  </resource>
-				<array  len="0" shared="false">
-				</array>
-				<string> "" </string>
+				<real> 20 </real>
+				<real> 80 </real>
+				<real> 550 </real>
+				<string> "(help text goes here)" </string>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
